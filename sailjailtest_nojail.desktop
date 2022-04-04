@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=SailJailTest Disabled
-Icon=icom-m-application
+Icon=icon-m-diagnostic
 Exec=/usr/bin/sailjailtest
 
 [X-SailJail]

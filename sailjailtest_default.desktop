@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
 Name=SailJailTest NoSection
-Icon=icom-m-application
+Icon=icon-m-diagnostic
 Exec=/usr/bin/sailjailtest
 
