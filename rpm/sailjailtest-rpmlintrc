@@ -1,0 +1,3 @@
+from Config import *
+addFilter("summary-too-long")
+addFilter("no-changelogname-tag")
