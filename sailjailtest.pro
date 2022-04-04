@@ -11,6 +11,10 @@ on_device {
 
 SOURCES += src/$${TARGET}.cpp
 
-desktop.files += $${TARGET}_default.desktop  $${TARGET}_nojail.desktop
+#desktop.files += $${TARGET}_default.desktop  $${TARGET}_nojail.desktop
+
+extra_desktop.path += /usr/share/applications
+extra_desktop.files += $${TARGET}_default.desktop  $${TARGET}_nojail.desktop
+INSTALLS += extra_desktop
 
 OTHER_FILES += $$files(rpm/*) $${TARGET}.qml)

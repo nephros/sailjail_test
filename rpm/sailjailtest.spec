@@ -16,6 +16,7 @@ License:    Apache-2.0
 URL:        https://github.com/nephros/sailjailtest
 Source0:    %{name}-%{version}.tar.gz
 Source100:  sailjailtest.yaml
+Source101:  sailjailtest-rpmlintrc
 Requires:   sailjail
 BuildRequires:  pkgconfig(sailfishapp)
 BuildRequires:  pkgconfig(Qt5Quick)
