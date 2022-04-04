@@ -21,6 +21,7 @@ BuildRequires:  pkgconfig(sailfishapp)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  qt5-qmake
+BuildRequires:  desktop-file-utils
 
 %description
 %{summary}.
@@ -51,8 +52,14 @@ rm -rf %{buildroot}
 # >> install post
 # << install post
 
+desktop-file-install --delete-original       \
+  --dir %{buildroot}%{_datadir}/applications             \
+   %{buildroot}%{_datadir}/applications/*.desktop
+
 %files
 %defattr(-,root,root,-)
 %{_bindir}/*
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/%{name}/*
 # >> files
 # << files

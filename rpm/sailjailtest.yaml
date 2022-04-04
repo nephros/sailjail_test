@@ -21,3 +21,5 @@ Builder: qmake5
 NoIconCache: true
 Files:
   - '%{_bindir}/*'
+  - '%{_datadir}/applications/%{name}.desktop'
+  - '%{_datadir}/%{name}/*'

@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=SailJailTest
+Icon=icom-m-application
+Exec=/usr/bin/sailjailtest
