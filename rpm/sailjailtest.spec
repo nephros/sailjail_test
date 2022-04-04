@@ -64,7 +64,7 @@ desktop-file-install --delete-original       \
 %files
 %defattr(-,root,root,-)
 %{_bindir}/*
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/*.desktop
 %{_datadir}/%{name}/*
 # >> files
 # << files

@@ -22,5 +22,5 @@ NoIconCache: true
 Check: true
 Files:
   - '%{_bindir}/*'
-  - '%{_datadir}/applications/%{name}.desktop'
+  - '%{_datadir}/applications/*.desktop'
   - '%{_datadir}/%{name}/*'
