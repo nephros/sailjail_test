@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
-Name=SailJailTest
+Name=SJT Configured
 Icon=icon-m-diagnostic
 Exec=/usr/bin/sailjailtest
 
-[X-SailJail]
+[X-Sailjail]
 Permissions=UserDirs
 OrganizationName=OrgaNameFromDesktop
 ApplicationName=AppNameFromDesktop

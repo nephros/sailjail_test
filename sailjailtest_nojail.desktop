@@ -1,10 +1,10 @@
 [Desktop Entry]
 Type=Application
-Name=SailJailTest Disabled
+Name=SJT Disabled
 Icon=icon-m-diagnostic
 Exec=/usr/bin/sailjailtest
 
-[X-SailJail]
+[X-Sailjail]
 Sandboxing=disabled
 OrganizationName=OrgaNameFromDesktop
 ApplicationName=AppNameFromDesktop
