@@ -1,0 +1,23 @@
+Name: sailjailtest
+Summary: SailJail Test App
+Version: 0.9.0
+Release: 0
+Group: Applications
+License: Apache-2.0
+#SCM: "https://github.com/nephros/sailjailtest"
+URL: "https://github.com/nephros/sailjailtest"
+Sources:
+    - '%{name}-%{version}.tar.gz'
+SetupOptions: -q -n %{name}
+Requires:
+  - sailjail
+PkgBR:
+  - qt5-qmake
+PkgConfigBR:
+  - sailfishapp
+  - Qt5Quick
+  - Qt5Qml
+Builder: qmake5
+NoIconCache: true
+Files:
+  - '%{_bindir}/*'
