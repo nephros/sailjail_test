@@ -8,7 +8,7 @@ License: Apache-2.0
 URL: "https://github.com/nephros/sailjailtest"
 Sources:
     - '%{name}-%{version}.tar.gz'
-SetupOptions: -q -n %{name}
+SetupOptions: -q -n %{name}-%{version}
 Requires:
   - sailjail
 PkgBR:
