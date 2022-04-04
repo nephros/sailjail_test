@@ -56,6 +56,11 @@ desktop-file-install --delete-original       \
   --dir %{buildroot}%{_datadir}/applications             \
    %{buildroot}%{_datadir}/applications/*.desktop
 
+%check
+# >> check
+%{buildroot}%{_bindir}/%{name} ||:
+# << check
+
 %files
 %defattr(-,root,root,-)
 %{_bindir}/*

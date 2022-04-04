@@ -19,6 +19,7 @@ PkgConfigBR:
   - Qt5Qml
 Builder: qmake5
 NoIconCache: true
+Check: true
 Files:
   - '%{_bindir}/*'
   - '%{_datadir}/applications/%{name}.desktop'
