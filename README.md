@@ -54,3 +54,26 @@ the Title, while `Sailfish::Silica::StandardPaths.cache` will show another.
 Also, `QQMLEngine::offlineStoragePath` seems to be somewhat independent from
 the others, probably because comes from the Engine and not the QGUIApplication.
 
+#### ExampleOutput snippets:
+
+Launching binary from command line:
+Note that setting the names in CPP makes `StandardPaths` follow, but not `offlineStoragePath`
+
+    [I] unknown:0 - ~~~~~ Defaults BEFORE setting appname and organame ~~~~~
+    
+    [I] unknown:0 - "AppDataLocation" ("/home/defaultuser/.local/share/OrgaNameFromDesktop/AppNameFromDesktop", "/usr/local/share/OrgaNameFromDesktop/AppNameFromDesktop", "/usr/share/OrgaNameFromDesktop/AppNameFromDesktop")
+    [I] unknown:0 - "AppLocalDataLocation" ("/home/defaultuser/.local/share/OrgaNameFromDesktop/AppNameFromDesktop", "/usr/local/share/OrgaNameFromDesktop/AppNameFromDesktop", "/usr/share/OrgaNameFromDesktop/AppNameFromDesktop")
+    [I] unknown:0 - "AppConfigLocation" ("/home/defaultuser/.config/OrgaNameFromDesktop/AppNameFromDesktop", "/etc/xdg/OrgaNameFromDesktop/AppNameFromDesktop")
+    [I] unknown:0 - ---- LocalStorage ----
+    [I] unknown:0 - "offlineStoragePath" "/home/defaultuser/.local/share/OrgaNameFromDesktop/AppNameFromDesktop/QML/OfflineStorage"
+    [I] unknown:0 - ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    [I] unknown:0 -
+    [I] unknown:0 - ~~~~~ Defaults AFTER setting appname and organame ~~~~~
+    
+    [I] unknown:0 - "AppDataLocation" ("/home/defaultuser/.local/share/OrgaNameFromCpp/AppNameFromCpp", "/usr/local/share/OrgaNameFromCpp/AppNameFromCpp", "/usr/share/OrgaNameFromCpp/AppNameFromCpp")
+    [I] unknown:0 - "AppLocalDataLocation" ("/home/defaultuser/.local/share/OrgaNameFromCpp/AppNameFromCpp", "/usr/local/share/OrgaNameFromCpp/AppNameFromCpp", "/usr/share/OrgaNameFromCpp/AppNameFromCpp")
+    [I] unknown:0 - "AppConfigLocation" ("/home/defaultuser/.config/OrgaNameFromCpp/AppNameFromCpp", "/etc/xdg/OrgaNameFromCpp/AppNameFromCpp")
+    [I] unknown:0 - ---- LocalStorage ----
+    [I] unknown:0 - "offlineStoragePath" "/home/defaultuser/.local/share/OrgaNameFromDesktop/AppNameFromDesktop/QML/OfflineStorage"
+
+
