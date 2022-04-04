@@ -6,6 +6,30 @@ It shows the variaous paths that are influenced by the OrganizationName and Appl
 
 ## How to use
 
+Basically, launch the application(s), and observe their output at the console (in the Info channel).
+
+### C++ part
+
+See (https://github.com/nephros/sailjail_test/blob/master/src/sailjailtest.cpp).
+
+The very basic c++ application starts up the SailfishApp, logs the default
+paths/locations to console (using `qInfo()`), then sets orga and app names, and again prints the paths/locations.
+
+So:
+
+    SailfishApp::application(argc, argv)
+    SailfishApp::createView()
+    view->setSource("qml/sailjailtest.qml")
+
+    print_paths()
+
+    setOrganizationName("OrgaNameFromCpp")
+    setApplicationName("AppNameFromCpp")
+
+    print_paths()
+
+    exec()
+
 ### QML app
 
 Three .desktop files are installed, one without a [Sailjail] section, 
@@ -15,22 +39,18 @@ and one with `Sandboxing=disabled`.
 It shows all the paths present in `Silica.StandardPaths`. (Note that this is NOT `Qt.labs.platform.StandardPaths`!!).
 Using a Button you can set/reset `Qt.application.name` and `Qt.application.organization` to new values and see how they affect the paths displayed.
 
-### C++ part
-
-The very basic c++ application starts up the SailfishApp, logs the default paths/locations to console (using `qInfo()`), then calls
-
-    app->setOrganizationName("OrgaNameFromCpp");
-    app->setApplicationName("AppNameFromCpp");
-    
-and again prints the paths/locations.
-
 ### Observations
 
-With at least four sources for `OrganizationName` and `setApplicationName` (CPP, QML, the .desktop files), 
+With at least four sources for `OrganizationName` and `ApplicationName` (CPP, QML, the .desktop files, 
 plus defaults set by of SailJail when these settings are missing (i.e. defaulting to application binary name), 
 getting everything right can be quite confusing.
 
 I.e. using `QStandardPaths::AppDataLocation` or `QStandardPaths::AppLocalDataLocation` 
 will show different things depending on what has been initialized from where.
 
-Also, `QQMLEngine::offlineStoragePath` seems to be somewhat independent from the others, probably because comes from the Engine and not the QGUIApplication..
+Or the fact that the QML page will show one set of OrgaName/AppName pair, in
+the Title, while `Sailfish::Silica::StandardPaths.cache` will show another.
+
+Also, `QQMLEngine::offlineStoragePath` seems to be somewhat independent from
+the others, probably because comes from the Engine and not the QGUIApplication.
+
