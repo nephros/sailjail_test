@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=Application
-Name=SailJailTest
+Name=SailJailTest Disabled
 Icon=icom-m-application
 Exec=/usr/bin/sailjailtest
 
 [X-SailJail]
-Permissions=UserDirs
+Sandboxing=disabled
 OrganizationName=OrgaNameFromDesktop
 ApplicationName=AppNameFromDesktop
 
