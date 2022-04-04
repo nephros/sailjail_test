@@ -2,7 +2,7 @@
 Type=Application
 Name=SJT Disabled
 Icon=icon-m-diagnostic
-Exec=/usr/bin/sailjailtest
+Exec=sailjail -p sailjailtest_nojail.desktop /usr/bin/sailjailtest
 
 [X-Sailjail]
 Sandboxing=disabled
